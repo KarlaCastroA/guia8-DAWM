@@ -66,12 +66,10 @@ selectElement.addEventListener('change', (event) => {
         </div>`
       }
 
-      document.querySelector('#frases').innerHTML += frases_html
+      document.querySelector('#frases').innerHTML = frases_html
     })
     .catch(console.error);
 
-    // Limpiar las frases en cada evento
-    document.querySelector('#frases').innerHTML = ''
 })
 
 
