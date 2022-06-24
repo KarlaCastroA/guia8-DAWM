@@ -19,7 +19,7 @@ let cargarDatos = () => {
       let autor = escritor.querySelector('nombre').textContent
       informacion[id] = autor;
   
-      let plantilla = `<option value="${id}">${autor}</option>`
+      let plantilla = `<option value="${id}">${autor.replace(/.$/, '')}</option>`
       document.querySelector('select').innerHTML += plantilla
 
     }
@@ -57,7 +57,7 @@ selectElement.addEventListener('change', (event) => {
           <div class="test-inner ">
             <div class="test-author-thumb d-flex">
               <div class="test-author-info">
-                <h4>${informacion[id_escritor]}</h4>                                            
+                <h4>${informacion[id_escritor].replace(/.$/, '')}</h4>                                            
               </div>
             </div>
           <span>${unicaF}"</span>
